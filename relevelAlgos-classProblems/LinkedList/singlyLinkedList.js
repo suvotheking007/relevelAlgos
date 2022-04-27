@@ -25,7 +25,7 @@ class LinkedList {
 
     //   If the list is empty then insert the node as a first node
     if (!this.head) {
-      return this.insertFirst(node);
+      return this.insertFirst(data);
     }
 
     let listElement = this.head;
@@ -69,22 +69,10 @@ class LinkedList {
   printListData() {
     let listElement = this.head;
     while (listElement) {
-      console.log(listElement.data, this.size);
+      console.log(listElement.data);
       listElement = listElement.next;
     }
   }
 }
 
-const ll = new LinkedList();
-
-const node1 = 100;
-const node2 = 200;
-const node3 = 400;
-const node4 = 50;
-
-ll.insertFirst(node1);
-ll.insertFirst(node2);
-ll.insertLast(node3);
-ll.insertAt(node4, 2);
-
-ll.printListData();
+module.exports = { LinkedList };
